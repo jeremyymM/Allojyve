@@ -1,0 +1,18 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Allojyvé",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Allojyvé",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/400x400.png",
+      "type": "image/png",
+      "sizes": "400x400"
+    }
+  ]
+}

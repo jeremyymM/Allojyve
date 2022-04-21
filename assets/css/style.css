@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.none {
+  display: none !important;
+}
+.yes{
+  display: block !important;
+}
+.transparent {
+  color: transparent;
+}
+
+
+
+#nav {
+  padding: 0;
+  width: 100%;
+  height: 18.52vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vw;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+#logoNav {
+  height: 17.31vh;
+  width: auto;
+  cursor: pointer;
+}
+
+#nav>p {
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  color: black;
+  margin: 0 1vw;
+  cursor: pointer;
+}
+
+#nav>img {
+  margin: 1vw;
+}
+
+
+
+#mainContent {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 60vw;
+  height: auto;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.card {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.imgSlider {
+  width: auto;
+  height: 300px;
+  filter: drop-shadow(12px 8px 5px rgba(0, 0, 0, 0.25));
+  border-radius: 15px;
+  cursor: pointer;
+}
+.titleFilm{
+  margin-top: 10px;
+}
+
+#allSlider {
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#leftCol {
+  width: 5.42vw;
+  min-height: 100%;
+  background-color: #FFDC00;
+  border-left: solid 3.33vw black;
+}
+
+#rightCol {
+  width: 5.42vw;
+  min-height: 100%;
+  background-color: #FFDC00;
+  border-right: solid 3.33vw black;
+}
+
+#cgu {
+  cursor: pointer;
+}
+
+#cookiePolicy{
+  cursor: pointer;
+}
+
+#rgpd{
+  cursor: pointer;
+}
+.sliderTitle {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 64px;
+}
+
+.sliderTitle::before {
+  position: absolute;
+  content: '';
+  background: #fbdd00;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: -10%;
+  top: -6%;
+}
+
+
+.slider::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+.slider::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border: 0px none #ffffff;
+  border-radius: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+  background: #c4c4c4;
+}
+
+.slider::-webkit-scrollbar-thumb:active {
+  background: #c4c4c4;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+.slider::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+.slider::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+.slider::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.close {
+  width: 0% !important;
+}
+
+.open {
+  width: 90% !important;
+  padding-left: 10vw;
+}
+
+#mobileNav {
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+#topMobileNav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+  overflow: hidden;
+}
+
+#menuMobile {
+  height: 120vh;
+  width: 0%;
+  z-index: 100;
+  background-color: white;
+  transition: all 0.5s ease 0s;
+  overflow: hidden;
+}
+
+.logoMobileNav {
+  height: 178px;
+  width: auto;
+}
+
+#firstRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#linkTo {
+  height: 40vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vh 0;
+  border-top: solid black 5px;
+  border-bottom: solid black 5px;
+}
+
+#linkTo>div {
+  font-size: 2rem;
+}
+
+#socialsNavTop {
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
+
+#socialsNavTop>h3 {
+  font-size: 2rem;
+}
+
+#socialsLinkTop {
+  margin-top: 5vh;
+  width: 35vw;
+}
+
+.fa-brands {
+  margin: 0 20px 0 0;
+}
+
+.heightMobileNav {
+  height: 19vh;
+}
+
+#footer{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+#footer > * {
+  color: white;
+}
+#socialsFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#titleSocialsFooter{
+  font-size: 2rem;
+}
+#socialsLinkFooter{
+  margin-top: 10px;
+}
+#logoCopy{
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: #ffffff solid 2px;
+  border-right: #ffffff solid 2px;
+}
+#logoFooter{
+  height: 15vh;
+  width: auto;
+}
+#legals{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#legals > h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /* z-index: 10000; Sit on top */
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.12); /* Black w/ opacity */
+}
+.modal-content {
+
+  position: relative;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 20vh;
+  margin-right: 3.3%;
+  margin-left: 3.3%;
+  min-width: 80%;
+  min-height: 50px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  opacity: 96%;
+  border-left: none;
+  border-right: none;
+  padding: 50px;
+  border-bottom: solid 6px #fbdd00;
+  border-top: solid 4px black;
+}
+
+
+
+
+
+
+
+
+.modalAlert {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.12); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-alert {
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 50vh;
+  width: 80%;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    border-top: solid 4px black;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 6px #fbdd00;
+}
+
+#leftColAlert{
+  padding: 0;
+  margin: 0;
+  display : inline-block;
+  height : 0;
+  width : 0;
+  border-right : 59px solid transparent;
+  border-bottom : 59px solid #fbdd00;
+}
+#messageNewFilm{
+  padding: 20px;
+  text-align: center;
+}
+#rightColAlert{
+  padding: 0;
+  margin: 0;
+  display : inline-block;
+  height : 0;
+  width : 0;
+  border-left : 59px solid transparent;
+  border-top : 59px solid black;
+}
+#averageNoteUser{
+  position: relative;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  color: black;
+  z-index: 1;
+  bottom: 12%;
+  margin-top: 4%;
+
+}
+#averageNoteUser::before {
+  position: absolute;
+  content: '';
+  background: #fbdd00;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  width: 9rem;
+  height: 100%;
+  z-index: -1;
+}
+
+#descriptif{
+  display : flex;
+  justify-content: flex-start;
+  
+  flex-direction: column;
+
+  margin-left: 2%;
+  min-height: 80%;
+  margin-bottom: 10%;
+}
+
+
+#titleFilm{
+  font-weight: bold;
+  font-size: 3rem;
+  
+  
+}
+
+#releaseDate{
+  
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+#synopsis{
+  font-size: 1.1rem;
+  width: 90%;
+  margin-top: 6%;
+  line-height: 25px;
+}
+
+
+#poster{
+  box-shadow : 9px 9px 20px 0px #FFDC00; 
+  margin-right: 20px;
+    height: 480px;
+    width: auto;
+  border-radius: 10px;
+  }
+#spanModal{
+  color: black;
+}
+#closingModal{
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+#closingModal:hover{
+  color: #fbdd00;
+}
+#facebookFooter, #twitterFooter, #instagramFooter, #facebookNavTop, #twitterNavTop, #instagramNavTop{
+  cursor: pointer;
+}
+
+
+
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  filter: blur(0.5px);
+  perspective: 122px;
+  animation: animB 2s ease 5s;
+}
+
+
+/* La lettre A qui ne vient plus bousculer les autres et lancer l'animation, mais juste jouer sur l'opacité  */
+
+.icone path:nth-child(1) {
+  opacity : 0;
+  animation: anim 2s ease-out 0.2s 1 normal forwards;
+}
+
+/* le llojivé et la border bottom */
+
+.icone path:nth-child(2) {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  fill-opacity: 0%;
+  animation: anim 8s ease 0.7s forwards;
+
+}
+
+.icone path:nth-child(3) {
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: anim 4s ease-in-out 0.6s forwards;
+}
+
+
+#carre1,
+#carre2{
+  opacity: 0;
+  animation: anim 3s ease 3s forwards;
+
+}
+
+
+/* Les Keyframes */
+
+/* Anim de llojivé */
+@keyframes anim {
+  to {
+      stroke-dashoffset: 0;
+      opacity: 100%;
+      fill-opacity: 100%;
+  }
+
+}
+
+
+@keyframes animB {
+  to { 
+      background : rgba(0, 0, 0, 0);
+      filter :blur(15px);
+      transform: rotateX(90deg) rotateY(0deg);
+      perspective:0;
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 1214px) {
+  #nav p{
+    font-size: 1.45rem;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  #nav {
+    display: none;
+  }
+
+  #mobileNav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #allSlider {
+    padding-top: 10vh;
+  }
+
+  .sliderTitle {
+    font-size: 53px;
+  }
+  .slider{
+    width: 70vw;
+  }
+  #footer{
+    flex-direction: column-reverse;
+    padding: 50px;
+  }
+  #logoCopy{
+    border-top: solid white 3px;
+    border-bottom: solid white 3px;
+    border-left: none;
+    border-right: none;
+    margin: 20px 0;
+    padding: 20px;
+    justify-content: center;
+  }
+  #messageNewFilm {
+    font-size: 17px;
+    padding: 5px;
+  }
+  .modal-content {
+    flex-direction: column;
+  }
+  #descriptif{
+    margin : 5px;
+    text-align: center;
+  }
+  #averageNoteUser{
+    position: relative;
+    text-align: left;
+    margin-top: 3%;
+  }
+  #poster{
+    margin-top: 5px;
+    margin-right: 0px;
+      height: 300px;
+    }
+    #titleFilm{
+      position: relative;
+      margin-top: 3%;
+    }
+    #releaseDate{
+      position: relative;
+      
+    }
+    #synopsis{
+      text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+  .logoMobileNav {
+    height: 100px;
+  }
+  #closeMenu{
+    margin-right: 50px;
+  }
+  #socialsLinkTop {
+    width: 100%;
+  }
+  #linkTo{
+    border-top: none;
+    width: 60vw;
+  }
+  #allSlider {
+    width: 100%;
+  }
+  .sliderTitle {
+    width: 100%;
+    font-size: 40px;
+    background-color: #fbdd00;
+    padding-top: 10px;
+  }
+  .sliderTitle::before {
+    position: absolute;
+    content: '';
+    background: transparent;
+    clip-path: inherit;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  .slider {
+    width: 100%;
+  }
+  #leftCol,
+  #rightCol {
+    width: 0%;
+    border: none;
+  }
+  .open {
+    width: 100% !important;
+  }
+  #leftColAlert, #rightColAlert {
+    display: none;
+  }
+  .modal-content-alert{
+    border-right: solid 4px black;
+    border-left: solid 4px #fbdd00;
+  }
+  .modal-content {
+    margin-top: 15vh;
+  }
+  
+  #titleFilm{
+    font-size: 1.5rem;
+    margin-top: 10%;
+  }
+  #releaseDate{
+    margin-top: 2%;
+  }
+  #synopsis{
+    font-size: 1rem;
+    margin-top: 15%;
+  }
+  #averageNoteUser{
+    margin-top: 10%;
+    font-size: 1.5rem;
+    
+  }
+}
